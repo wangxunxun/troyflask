@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+
+
+
+{% block body %}
+    <form method="post"  action="" >
+
+    		主题<input name="title" type="text" value=""required="required" /><br>
+    		正文<input name="body" type="textarea" value="" required="required"/><br>
+    		{{macros.flash()}}
+            <input type="submit" class="modbtn1" value="提交" />
+
+    </form>
+{% endblock %}

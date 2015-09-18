@@ -1,0 +1,17 @@
+{% extends "base.html" %}
+
+
+
+
+{% block body %}
+    <form method="post"  action="" >
+    		手机号<input name="phone" type="text" value=""required="required" /><br>
+    		email<input name="email" type="text" value="" required="required"/><br>
+    		用户名<input name="username" type="text" value="" required="required"/><br>
+    		真实姓名<input name="realname" type="text" value="" /><br>
+    		密码<input name="password" type="password" value="" /><br>
+    		{{macros.flash()}}
+            <input type="submit" class="modbtn1" value="提交" />
+
+    </form>
+{% endblock %}

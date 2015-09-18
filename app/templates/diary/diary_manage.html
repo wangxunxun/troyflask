@@ -1,0 +1,32 @@
+{% extends "base.html" %}
+
+
+
+
+{% block body %}
+        <table border="1">
+		  <tr>
+		    <th>id</th>
+		    <th>主题</th>
+		    <th>正文</th>
+		    <th>发布时间</th>
+		    <th>作者</th>
+		    <th>手机号</th>
+		    <th>操作</th>
+		  </tr>
+		  {%for i in diarys%}
+		  <tr>
+		    <td>{{i.id}}</td>
+		    <td>{{i.title}}</td>
+		    <td>{{i.body}}</td>
+		    <td>{{i.create_time.strftime("%Y-%m-%d %H:%M:%S")}}</td>
+		    <td>{{i.user.real_name}}</td>
+		    <td>{{i.user.phone_number}}</td>
+
+		    <td><a href="/server/diary_manage/delete_diary/{{i.id}}">删除</a>
+		    <a href="/server/diary_manage/edit_diary/{{i.id}}">编辑</a>
+		    </td>
+		  </tr>
+		  {%endfor%}
+		</table>
+{% endblock %}
